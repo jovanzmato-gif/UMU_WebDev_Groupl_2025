@@ -1,0 +1,59 @@
+body {
+  background:yellowgreen;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header Banner */
+.contact-header {
+  background: linear-gradient(to right, #007bff, #6610f2);
+  padding: 80px 20px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+/* Floating Button */
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ff5722;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 30px;
+  font-size: 16px;
+  text-decoration: none;
+  z-index: 1000;
+  transition: 0.3s;
+}
+.floating-btn:hover {
+  background: #e64a19;
+}
+
+/* Contact Card */
+.contact-card {
+  background:green;
+  border-left: 4px solid #007bff;
+}
+
+/* Social Buttons */
+.social-btn {
+  display: inline-block;
+  padding: 7px 14px;
+  color: white;
+  margin-right: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  text-decoration: none;
+}
+.fb { background: #1877f2; }
+.ig { background: #e4405f; }
+.yt { background: #ff0000; }
+
+.map {
+  border-radius: 15px;
+}
+
+#message {
+  font-weight: bold;
+  font-size: 18px;
+}
