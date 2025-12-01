@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transport - ArtHub</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://jovanzmato-gif.github.io/UMU_WebDev_Groupl_2025/css/transport.css">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color:#2b2d42;">
+    <div class="container">
+      <a class="navbar-brand fw-bold fade-slide-up delay-5"
+        href="https://jovanzmato-gif.github.io/UMU_WebDev_Groupl_2025-/html pages/index.html">
+        <i class="fas fa-palette me-2"></i>ArtHub
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav fade-slide-up delay-1">
+          <li class="nav-item"><a class="nav-link"
+              href="https://jovanzmato-gif.github.io/UMU_WebDev_Groupl_2025-/html pages/index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link"
+              href="https://jovanzmato-gif.github.io/UMU_WebDev_Groupl_2025-/html pages/gallery.html">GALLERY</a></li>
+          <li class="nav-item"><a class="nav-link"
+              href="https://jovanzmato-gif.github.io/UMU_WebDev_Groupl_2025-/html pages/contact.html">CONTACT</a></li>
+          <li class="nav-item"><a class="nav-link active"
+              href="https://jovanzmato-gif.github.io/UMU_WebDev_Groupl_2025-/html pages/transport.html">TRANSPORT</a>
+          </li>
+
+          <!-- Services Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              SERVICES
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item"
+                  href="https://jovanzmato-gif.github.io/UMU_WebDev_Groupl_2025-/html pages/accomodation.html">
+                  <i class="fas fa-hotel me-2"></i><strong>ACCOMMODATION</strong>
+                </a></li>
+              <li><a class="dropdown-item"
+                  href="https://jovanzmato-gif.github.io/UMU_WebDev_Groupl_2025-/html pages/dining.html">
+                  <i class="fas fa-utensils me-2"></i><strong>RESTAURANT</strong>
+                </a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8 mx-auto text-center">
+          <h1 class="display-5 fw-bold mb-3 fade-slide-up delay-2">Transport & Directions</h1>
+          <p class="lead mb-4 fade-slide-up delay-3">Find the best routes to ArtHub Gallery. We make your journey as
+            beautiful as the art you'll discover.</p>
+          <div class="d-flex justify-content-center gap-3 fade-slide-up delay-4">
+            <a href="#route-planner" class="btn btn-primary btn-lg">
+              <i class="fas fa-route me-2"></i>Plan Your Route
+            </a>
+            <a href="#transport-options" class="btn btn-outline-light btn-lg">
+              <i class="fas fa-bus me-2"></i>Transport Options
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page Title -->
+  <section class="text-center my-5 py-3" id="route-planner">
+    <h2 class="fw-bold mb-3 fade-slide-up delay-2">Transport Options</h2>
+    <p class="text-muted fade-slide-up delay-3">Navigate to the gallery easily using available routes</p>
+  </section>
+
+  <!-- Route Planner -->
+  <div class="container mb-5 fade-slide-up delay-3">
+    <div class="card p-4 shadow-sm">
+      <h3 class="mb-4"><i class="fas fa-route me-2"></i>Route Planner</h3>
+      <form id="routeForm">
+        <div class="row g-3">
+          <div class="col-md-5">
+            <div class="input-group">
+              <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+              <input type="text" class="form-control" id="startPoint" placeholder="Enter starting location" required>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="input-group">
+              <span class="input-group-text"><i class="fas fa-flag-checkered"></i></span>
+              <input type="text" class="form-control" id="endPoint" placeholder="Enter destination (ArtHub Gallery)"
+                value="ArtHub Gallery" required>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <button type="submit" class="btn btn-primary w-100">
+              <span id="buttonText">Get Route</span>
+              <div class="spinner-border spinner-border-sm text-light ms-2" role="status" id="routeSpinner">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </form>
+      <div id="routeResult" class="mt-4"></div>
+    </div>
+  </div>
+
+  <!-- Transport Options -->
+  <div class="container mb-5 fade-slide-up delay-4" id="transport-options">
+    <h3 class="mb-4"><i class="fas fa-bus me-2"></i>Available Transport Modes</h3>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card p-4 text-center h-100">
+          <div class="transport-icon">
+            <i class="fas fa-bus"></i>
+          </div>
+          <h5>Bus</h5>
+          <p>Regular bus service to the gallery. Affordable and eco-friendly.</p>
+          <div class="mt-3">
+            <small class="text-muted"><i class="fas fa-clock me-1"></i> Frequency: Every 15 mins</small><br>
+            <small class="text-muted"><i class="fas fa-money-bill-wave me-1"></i> Fare: $2.50</small>
+          </div>
+          <button class="btn btn-outline-primary mt-3 bus-info-btn">More Info</button>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-4 text-center h-100">
+          <div class="transport-icon">
+            <i class="fas fa-taxi"></i>
+          </div>
+          <h5>Taxi / Ride-share</h5>
+          <p>Quick and comfortable rides, ideal for groups or alone.</p>
+          <div class="mt-3">
+            <small class="text-muted"><i class="fas fa-clock me-1"></i> Wait time: 5-10 mins</small><br>
+            <small class="text-muted"><i class="fas fa-money-bill-wave me-1"></i> Approx: $15-25</small>
+          </div>
+          <button class="btn btn-outline-primary mt-3 taxi-info-btn">More Info</button>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-4 text-center h-100">
+          <div class="transport-icon">
+            <i class="fas fa-walking"></i>
+          </div>
+          <h5>Walking / Cycling</h5>
+          <p>For nearby visitors, enjoy a scenic walk to the gallery.</p>
+          <div class="mt-3">
+            <small class="text-muted"><i class="fas fa-clock me-1"></i> Distance: 1.5km from city center</small><br>
+            <small class="text-muted"><i class="fas fa-bicycle me-1"></i> Bike rental available</small>
+          </div>
+          <button class="btn btn-outline-primary mt-3 walk-info-btn">More Info</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Visitor Feedback -->
+  <div class="container mb-5 fade-slide-up delay-5">
+    <h3 class="mb-4"><i class="fas fa-comments me-2"></i>Share Your Travel Experience</h3>
+    <div class="card p-4 shadow-sm">
+      <form id="feedbackForm">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="input-group">
+              <span class="input-group-text"><i class="fas fa-user"></i></span>
+              <input type="text" class="form-control" id="visitorName" placeholder="Your Name" required>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <select class="form-select" id="transportMode">
+              <option selected>Select transport mode</option>
+              <option value="bus">Bus</option>
+              <option value="taxi">Taxi/Rideshare</option>
+              <option value="walking">Walking/Cycling</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="col-12">
+            <div class="input-group">
+              <span class="input-group-text"><i class="fas fa-comment"></i></span>
+              <textarea class="form-control" id="visitorFeedback" rows="3"
+                placeholder="Share your experience with this transport mode..." required></textarea>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="rating">
+                <span class="me-2">Rate your experience:</span>
+                <div class="btn-group" role="group">
+                  <input type="radio" class="btn-check" name="rating" id="rating1" value="1" autocomplete="off">
+                  <label class="btn btn-outline-warning" for="rating1">1</label>
+
+                  <input type="radio" class="btn-check" name="rating" id="rating2" value="2" autocomplete="off">
+                  <label class="btn btn-outline-warning" for="rating2">2</label>
+
+                  <input type="radio" class="btn-check" name="rating" id="rating3" value="3" autocomplete="off" checked>
+                  <label class="btn btn-outline-warning" for="rating3">3</label>
+
+                  <input type="radio" class="btn-check" name="rating" id="rating4" value="4" autocomplete="off">
+                  <label class="btn btn-outline-warning" for="rating4">4</label>
+
+                  <input type="radio" class="btn-check" name="rating" id="rating5" value="5" autocomplete="off">
+                  <label class="btn btn-outline-warning" for="rating5">5</label>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-success px-4">
+                <i class="fas fa-paper-plane me-2"></i>Submit Feedback
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <div id="feedbackList" class="mt-4">
+        <h5 class="mb-3">Recent Feedback</h5>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center p-4 mt-5">
+    <div class="container">
+      <p>&copy; 2025 ArtHub | Developed by MIYINGO GILBERT</p>
+      <p> science in information tecnology </p>
+      <div class="mt-2">
+        <a href="#" class="text-light mx-2"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="text-light mx-2"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-light mx-2"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-light mx-2"><i class="fab fa-tripadvisor"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="java/transport.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
