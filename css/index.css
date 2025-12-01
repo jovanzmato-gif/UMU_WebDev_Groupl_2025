@@ -17,7 +17,7 @@ body {
   scroll-behavior: smooth;
 }
 
-/* NAVBAR */
+/*  NAVBAr*/
 .navbar {
   padding: 18px 40px;
   transition: 0.3s ease;
@@ -57,7 +57,7 @@ body {
   border-radius: 12px;
 }
 
-/* FEATURED ARTWORK CARDS */
+/* FEATURED ARTWORK CARDS*/
 .featured-card {
   background: white;
   border-radius: 12px;
@@ -74,9 +74,15 @@ body {
   height: 250px;
   border-radius: 10px;
   object-fit: cover;
+  transition: 0.3s ease;
 }
 
-/* ARTIST CARDS */
+.featured-card img.art-hover {
+  transform: scale(1.05);
+  box-shadow: var(--smooth-shadow);
+}
+
+/* -- ARTIST CARDS-- */
 .artist-card {
   background: white;
   border-radius: 10px;
@@ -95,21 +101,43 @@ body {
   object-fit: cover;
 }
 
-/* VISITOR SERVICE CARDS (Bootstrap Cards) */
-.card img {
-  object-fit: cover;
-  height: 230px;
-  border-radius: 10px;
+.artist-card.artist-hover {
+  transform: translateY(-6px);
+  box-shadow: var(--smooth-shadow);
 }
 
-/* FADE-IN ANIMATION (JS) */
+/* -VISITOR SERVICES CARDS- */
+.service-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: var(--smooth-shadow);
+  transition: 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.service-card img {
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.service-card.service-hover {
+  transform: translateY(-6px);
+  box-shadow: var(--smooth-shadow);
+}
+
+/* FADE-IN ANIMATION FOR JS */
 .fade-in {
   opacity: 1 !important;
   transform: translateY(0) !important;
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-/* SCROLL-TO-TOP BUTTON */
+/* ---SCROLL-TO-TOP BUTTON--- */
 #scrollTop {
   position: fixed;
   bottom: 22px;
@@ -133,21 +161,21 @@ body {
   transform: translateY(-4px);
 }
 
-/* FOOTER */
+/* --footer-- */
 footer {
   background-color: var(--primary-color);
   color: white;
   padding: 50px 0;
 }
 
-.footer-social a {
+footer .social-links a {
   color: var(--secondary-color);
-  font-size: 22px;
-  margin: 0 12px;
+  margin: 0 10px;
+  font-size: 20px;
   transition: 0.3s ease;
 }
 
-.footer-social a:hover {
+footer .social-links a:hover {
   color: var(--accent-color);
 }
 
@@ -157,7 +185,7 @@ footer {
     text-align: center;
   }
 
-  .footer-social {
+  footer .social-links {
     margin-top: 20px;
   }
 }
