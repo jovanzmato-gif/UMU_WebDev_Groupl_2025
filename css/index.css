@@ -12,10 +12,16 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: rgb(249, 243, 235);
   color: var(--text-color);
   scroll-behavior: smooth;
+    background-image: url(index-images/sky.jpeg); 
+    background-size: cover;           /* makes the image cover the whole screen */
+    background-position: center;      /* centers the image */
+    background-repeat: no-repeat;     /* prevents tiling */
+    background-attachment: fixed;     /* makes the background stay fixed on scroll */
 }
+
+
 
 /*  NAVBAr*/
 .navbar-nav .nav-link {
