@@ -1,0 +1,100 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Banner */
+.pp {
+    background-color: #5fc29f;
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+.pp .pal {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Cards */
+.service-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 15px;
+}
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Card body */
+.service-card .card-body h4 {
+    margin-bottom: 1rem;
+}
+.service-card .card-body p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Fade animations */
+.fade-slide-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 0.8s forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+.delay-5 { animation-delay: 1s; }
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Services & Order Section */
+h4.fw-bold {
+    color: #0c0c0d;
+    margin-bottom: 1rem;
+}
+ul.list-unstyled li {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/* Order input */
+input[type="email"] {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+button.btn-warning {
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #eee;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+}
+
+/* Modal images */
+.modal-body img {
+    margin-top: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .service-card {
+        margin-bottom: 2rem;
+    }
+}

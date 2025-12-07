@@ -12,10 +12,16 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: rgb(249, 243, 235);
   color: var(--text-color);
   scroll-behavior: smooth;
+    background-image: url(index-images/sky.jpeg); 
+    background-size: cover;           /* makes the image cover the whole screen */
+    background-position: center;      /* centers the image */
+    background-repeat: no-repeat;     /* prevents tiling */
+    background-attachment: fixed;     /* makes the background stay fixed on scroll */
 }
+
+
 
 /*  NAVBAr*/
 .navbar-nav .nav-link {
@@ -137,6 +143,25 @@ body {
   transform: translateY(0) !important;
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
+@keyframes fadeSlideUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.fade-slide-up {
+  opacity: 0;
+  animation-name: fadeSlideUp;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+/*-- DELAY CLASSES --*/
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+.delay-5 { animation-delay: 1s; 
 
 /* ---SCROLL-TO-TOP BUTTON--- */
 #scrollTop {
